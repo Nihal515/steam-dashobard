@@ -1697,7 +1697,7 @@ with tab8:
         
         fig.add_trace(go.Scatter(
             x=list(range(len(cust_cumsum_pct))),
-            y=_ensure_list(cust_cumsum_pct).values.tolist(),
+            y=_ensure_list(cust_cumsum_pct),
             mode='lines',
             name='Cumulative Revenue %',
             line=dict(color='#1f77d2', width=3),
