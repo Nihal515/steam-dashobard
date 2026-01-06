@@ -283,6 +283,21 @@ filtered_churn = churn[
 # ===========================
 # INSIGHT GENERATION FUNCTIONS
 # ===========================
+
+def _ensure_list_2d(data):
+    """Convert 2D pandas data (DataFrame or 2D array) to list of lists"""
+    if hasattr(data, 'values'):
+        # Convert numpy array to list of lists
+        return data.tolist()
+    elif isinstance(data, list):
+        return data
+    else:
+        # Try to convert numpy 2D array
+        try:
+            return data.tolist()
+        except:
+            return list(data)
+
 def get_revenue_insight(total_revenue, prev_revenue, growth_pct):
     if growth_pct > 10:
         return f"💰 Strong Performance: Revenue at ${total_revenue:,.0f} with {growth_pct:.1f}% growth. Momentum is excellent."
@@ -507,11 +522,11 @@ with tab1:
             x=_ensure_list(genre_rev.index),
             y=_ensure_list(genre_rev.values),
             marker=dict(
-                color=genre_rev.values,
+                color=_ensure_list(genre_rev.values),
                 colorscale='Viridis',
                 showscale=True
             ),
-            text=genre_rev.values.round(0),
+            text=_ensure_list(genre_rev.values.round(0)),
             textposition='auto'
         )])
         
@@ -534,7 +549,7 @@ with tab1:
         
         fig = go.Figure(data=[go.Pie(
             labels=region_rev.index,
-            values=region_rev.values,
+            values=_ensure_list(region_rev.values),
             hole=0.3,
             textposition='inside',
             textinfo='label+percent'
@@ -551,11 +566,11 @@ with tab1:
         pub_rev = filtered_df.groupby('publisher')['net_revenue'].sum().sort_values(ascending=False).head(10)
         
         fig = go.Figure(data=[go.Bar(
-            y=pub_rev.index,
-            x=pub_rev.values,
+            y=_ensure_list(pub_rev.index),
+            x=_ensure_list(pub_rev.values),
             orientation='h',
             marker=dict(color='#ff7f0e'),
-            text=pub_rev.values.round(0),
+            text=_ensure_list(pub_rev.values.round(0)),
             textposition='auto'
         )])
         
@@ -641,9 +656,9 @@ with tab2:
     )
     
     fig = go.Figure(data=go.Heatmap(
-        z=heatmap_data.values,
+        z=_ensure_list_2d(heatmap_data.values),
         x=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        y=heatmap_data.index,
+        y=_ensure_list(heatmap_data.index),
         colorscale='RdYlGn',
         colorbar=dict(title="Revenue ($)")
     ))
@@ -726,7 +741,7 @@ with tab3:
             x=_ensure_list(genre_price.index),
             y=_ensure_list(genre_price.values),
             marker=dict(color='#ff7f0e'),
-            text=[f"${x:.2f}" for x in genre_price.values],
+            text=[f"${x:.2f}" for x in _ensure_list(genre_price.values)],
             textposition='auto'
         )])
         
@@ -855,11 +870,11 @@ with tab4:
         continent_rev = filtered_df.groupby('continent')['net_revenue'].sum().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            x=continent_rev.values,
-            y=continent_rev.index,
+            x=_ensure_list(continent_rev.values),
+            y=_ensure_list(continent_rev.index),
             orientation='h',
             marker=dict(color='#1f77d2'),
-            text=[f"${x:,.0f}" for x in continent_rev.values],
+            text=[f"${x:,.0f}" for x in _ensure_list(continent_rev.values)],
             textposition='auto'
         )])
         
@@ -877,11 +892,11 @@ with tab4:
         pub_top = filtered_df.groupby('publisher')['net_revenue'].sum().sort_values(ascending=False).head(10)
         
         fig = go.Figure(data=[go.Bar(
-            y=pub_top.index,
-            x=pub_top.values,
+            y=_ensure_list(pub_top.index),
+            x=_ensure_list(pub_top.values),
             orientation='h',
             marker=dict(color='#ff7f0e'),
-            text=[f"${x:,.0f}" for x in pub_top.values],
+            text=[f"${x:,.0f}" for x in _ensure_list(pub_top.values)],
             textposition='auto'
         )])
         
@@ -983,7 +998,7 @@ with tab5:
             x=_ensure_list(age_rev.index),
             y=_ensure_list(age_rev.values),
             marker=dict(color='#1f77d2'),
-            text=[f"${x:,.0f}" for x in age_rev.values],
+            text=[f"${x:,.0f}" for x in _ensure_list(age_rev.values)],
             textposition='auto'
         )])
         
@@ -1003,7 +1018,7 @@ with tab5:
         
         fig = go.Figure(data=[go.Pie(
             labels=age_count.index,
-            values=age_count.values,
+            values=_ensure_list(age_count.values),
             textposition='inside',
             textinfo='label+percent'
         )])
@@ -1063,7 +1078,7 @@ with tab5:
         
         fig = go.Figure(data=[go.Pie(
             labels=segment_count.index,
-            values=segment_count.values,
+            values=_ensure_list(segment_count.values),
             textposition='inside',
             textinfo='label+percent',
             marker=dict(colors=['#2ca02c', '#1f77d2', '#ff7f0e', '#d62728', '#9467bd', '#8c564b'])
@@ -1080,8 +1095,8 @@ with tab5:
         segment_value = rfm_data.groupby('rfm_segment')['monetary'].sum().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            y=segment_value.index,
-            x=segment_value.values,
+            y=_ensure_list(segment_value.index),
+            x=_ensure_list(segment_value.values),
             orientation='h',
             marker=dict(color=['#2ca02c', '#1f77d2', '#ff7f0e', '#d62728', '#9467bd', '#8c564b'][:len(segment_value)])
         )])
@@ -1196,7 +1211,7 @@ with tab6:
             y=_ensure_list(forecast_genre.values),
             name='Forecast',
             marker=dict(color='#1f77d2'),
-            text=[f"${x:,.0f}" for x in forecast_genre.values],
+            text=[f"${x:,.0f}" for x in _ensure_list(forecast_genre.values)],
             textposition='auto'
         ))
         
@@ -1219,7 +1234,7 @@ with tab6:
             y=_ensure_list(forecast_region.values),
             name='Forecast',
             marker=dict(color='#ff7f0e'),
-            text=[f"${x:,.0f}" for x in forecast_region.values],
+            text=[f"${x:,.0f}" for x in _ensure_list(forecast_region.values)],
             textposition='auto'
         ))
         
@@ -1312,8 +1327,8 @@ with tab6:
         churn_pub = filtered_churn.groupby('publisher')['churn_probability'].mean().sort_values(ascending=False).head(10)
         
         fig = go.Figure(data=[go.Bar(
-            y=churn_pub.index,
-            x=churn_pub.values * 100,
+            y=_ensure_list(churn_pub.index),
+            x=_ensure_list(churn_pub.values) * 100,
             orientation='h',
             marker=dict(color='#d62728')
         )])
@@ -1492,7 +1507,7 @@ with tab7:
         
         fig = go.Figure(data=[go.Pie(
             labels=pub_genre.index,
-            values=pub_genre.values,
+            values=_ensure_list(pub_genre.values),
             textposition='inside',
             textinfo='label+percent'
         )])
@@ -1515,7 +1530,7 @@ with tab7:
         
         fig = go.Figure(data=[go.Pie(
             labels=top_pubs.index,
-            values=top_pubs.values,
+            values=_ensure_list(top_pubs.values),
             textposition='inside',
             textinfo='label+percent',
             hole=0.3
@@ -1532,8 +1547,8 @@ with tab7:
         cust_acq = filtered_df.groupby('publisher')['customer_id'].nunique().sort_values(ascending=False).head(10)
         
         fig = go.Figure(data=[go.Bar(
-            y=cust_acq.index,
-            x=cust_acq.values,
+            y=_ensure_list(cust_acq.index),
+            x=_ensure_list(cust_acq.values),
             orientation='h',
             marker=dict(color='#ff7f0e')
         )])
@@ -1810,9 +1825,9 @@ with tab9:
         cohort_retention_viz = cohort_retention_pct.iloc[-10:, :10]
         
         fig = go.Figure(data=go.Heatmap(
-            z=cohort_retention_viz.values,
-            x=range(len(cohort_retention_viz.columns)),
-            y=cohort_retention_viz.index,
+            z=_ensure_list_2d(cohort_retention_viz.values),
+            x=list(range(len(cohort_retention_viz.columns))),
+            y=_ensure_list(cohort_retention_viz.index),
             colorscale='RdYlGn',
             colorbar=dict(title="Retention %")
         ))
@@ -1842,7 +1857,7 @@ with tab9:
         
         for cohort in genre_retention_pct.index[-5:]:  # Last 5 cohorts
             fig.add_trace(go.Scatter(
-                x=range(len(genre_retention_pct.columns)),
+                x=list(range(len(genre_retention_pct.columns))),
                 y=_ensure_list(genre_retention_pct).loc[cohort],
                 mode='lines+markers',
                 name=str(cohort)
@@ -2028,12 +2043,12 @@ with tab10:
     corr_matrix = filtered_df[corr_cols].corr()
     
     fig = go.Figure(data=go.Heatmap(
-        z=corr_matrix.values,
+        z=_ensure_list_2d(corr_matrix.values),
         x=corr_cols,
         y=corr_cols,
         colorscale='RdBu',
         zmid=0,
-        text=corr_matrix.values.round(2),
+        text=_ensure_list(corr_matrix.values.round(2)),
         texttemplate='%{text:.2f}',
         textfont={"size": 10},
         colorbar=dict(title="Correlation")
