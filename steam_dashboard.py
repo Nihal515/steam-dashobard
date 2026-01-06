@@ -382,6 +382,20 @@ churn_rate = (churn_count / len(filtered_df) * 100) if len(filtered_df) > 0 else
 # ===========================
 # MAIN DASHBOARD - TAB STRUCTURE
 # ===========================
+# Add header with Steam logo before tabs
+st.markdown("""
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, rgba(31, 119, 210, 0.2), rgba(255, 127, 14, 0.2)); border-radius: 10px; border-left: 5px solid #1f77d2;">
+    <div style="font-size: 48px;">🎮</div>
+    <div>
+        <h1 style="margin: 0; font-size: 2.5em; color: #1f77d2;">STEAM ANALYTICS DASHBOARD</h1>
+        <p style="margin: 5px 0 0 0; color: #888; font-size: 1.1em;">Real-time Gaming Platform Insights & Performance Metrics</p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+
+
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
     "📊 Executive Overview",
     "📈 Time & Seasonality",
