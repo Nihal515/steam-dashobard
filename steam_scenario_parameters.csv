@@ -1,0 +1,7 @@
+parameter_name,min_value,max_value,default_value,description
+Revenue Growth %,-20,30,5,Expected change in total revenue
+MAU Growth %,0,25,8,Projected increase in monthly active users
+Churn Reduction %,0,30,5,Reduction in customer churn rate
+Discount Increase %,0,50,10,Increase in average discount offered
+Price Increase %,0,20,5,Increase in average game price
+Engagement Uplift %,0,40,10,Increase in player engagement (playtime/retention)

@@ -1,0 +1,41 @@
+[theme]
+primaryColor = "#1f77d2"
+backgroundColor = "#0f1419"
+secondaryBackgroundColor = "#1a1f2e"
+textColor = "#e0e0e0"
+font = "sans serif"
+
+[client]
+showErrorDetails = false
+showWarnings = true
+logger.level = "info"
+
+[logger]
+level = "info"
+messageFormat = "%(asctime)s - %(levelname)s - %(message)s"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+[server]
+port = 8501
+headless = true
+runOnSave = true
+fileWatcherType = "poll"
+maxUploadSize = 200
+enableCORS = false
+enableXsrfProtection = true
+
+[client.toolbarMode]
+value = "auto"
+
+[mapbox]
+token = ""
+
+[deprecation]
+showPyplotGlobalUse = false
+showfileUploaderEncoding = false
+showImageFormat = false
+showArrowTableWarnings = false

@@ -1,0 +1,501 @@
+customer_id,region,genre,publisher,playtime_hours,retention_days,churn_probability,predicted_churn_flag
+1,Europe,Action,EA,77.5,90,0.0,Low Risk
+2,Oceania,RPG,EA,61.8,90,0.0,Low Risk
+3,Asia,Simulation,Valve,59.9,90,0.0,Low Risk
+4,Europe,Strategy,EA,72.6,30,0.0,Low Risk
+5,North America,Simulation,EA,220.3,7,0.6,High Risk
+6,North America,Strategy,EA,167.2,90,0.0,Low Risk
+7,North America,Strategy,Ubisoft,38.6,90,0.3,Medium Risk
+8,South America,Simulation,EA,33.8,90,0.3,Medium Risk
+9,Europe,Action,Ubisoft,51.5,30,0.0,Low Risk
+10,Asia,RPG,Activision,154.9,365,0.0,Low Risk
+11,North America,Action,Activision,226.0,90,0.0,Low Risk
+12,Oceania,Indie,Ubisoft,109.2,7,0.6,High Risk
+13,Asia,Indie,Indie Studio,165.3,30,0.0,Low Risk
+14,North America,Action,Valve,170.6,180,0.0,Low Risk
+15,North America,Strategy,Valve,105.9,180,0.0,Low Risk
+16,North America,Indie,Valve,70.4,30,0.0,Low Risk
+17,North America,Action,Ubisoft,320.9,180,0.0,Low Risk
+18,Europe,Strategy,Activision,259.3,30,0.0,Low Risk
+19,Europe,Indie,Valve,65.3,30,0.0,Low Risk
+20,North America,Action,Indie Studio,206.4,180,0.0,Low Risk
+21,Europe,Strategy,Valve,110.3,180,0.0,Low Risk
+22,North America,Action,Indie Studio,188.1,90,0.0,Low Risk
+23,North America,Indie,EA,343.0,180,0.0,Low Risk
+24,Europe,Indie,Valve,177.0,7,0.6,High Risk
+25,Europe,Indie,EA,95.6,180,0.0,Low Risk
+26,Asia,RPG,Valve,60.9,30,0.0,Low Risk
+27,North America,Simulation,Valve,36.0,7,0.8999999999999999,High Risk
+28,Europe,Simulation,EA,92.5,30,0.0,Low Risk
+29,Europe,RPG,Activision,18.4,30,0.3,Medium Risk
+30,North America,Simulation,EA,341.2,30,0.0,Low Risk
+31,Europe,Action,EA,212.2,30,0.0,Low Risk
+32,North America,Strategy,Ubisoft,48.8,7,0.9999999999999999,High Risk
+33,North America,Action,Ubisoft,205.6,30,0.0,Low Risk
+34,South America,Action,Valve,72.9,90,0.0,Low Risk
+35,Oceania,Action,EA,77.7,30,0.0,Low Risk
+36,Asia,Strategy,Valve,82.3,30,0.0,Low Risk
+37,North America,RPG,Valve,126.2,90,0.0,Low Risk
+38,North America,Strategy,Ubisoft,55.7,180,0.0,Low Risk
+39,Asia,Action,Valve,176.9,180,0.0,Low Risk
+40,Europe,RPG,EA,154.1,30,0.0,Low Risk
+41,North America,RPG,Ubisoft,355.8,90,0.0,Low Risk
+42,Europe,Simulation,Valve,34.8,7,0.8999999999999999,High Risk
+43,North America,RPG,Ubisoft,79.8,7,0.6,High Risk
+44,South America,Strategy,Valve,27.4,30,0.3,Medium Risk
+45,North America,Simulation,Indie Studio,134.5,180,0.0,Low Risk
+46,Asia,Strategy,EA,34.5,30,0.3,Medium Risk
+47,North America,Action,Activision,34.3,7,0.8999999999999999,High Risk
+48,Europe,Action,Ubisoft,45.8,7,0.9999999999999999,High Risk
+49,Europe,Simulation,Valve,46.9,180,0.3,Medium Risk
+50,North America,Action,Ubisoft,197.2,90,0.0,Low Risk
+51,Oceania,Simulation,Indie Studio,65.9,30,0.0,Low Risk
+52,Asia,RPG,Ubisoft,71.5,90,0.0,Low Risk
+53,South America,Indie,Activision,145.4,90,0.0,Low Risk
+54,South America,Simulation,Activision,103.1,90,0.0,Low Risk
+55,Europe,Indie,Valve,74.1,30,0.0,Low Risk
+56,South America,RPG,Valve,36.3,180,0.4,Medium Risk
+57,North America,Simulation,Ubisoft,233.7,30,0.0,Low Risk
+58,North America,RPG,EA,11.5,90,0.3,Medium Risk
+59,North America,RPG,Activision,264.8,7,0.6,High Risk
+60,North America,Strategy,Indie Studio,97.7,30,0.0,Low Risk
+61,Europe,Simulation,EA,77.0,30,0.1,Low Risk
+62,North America,Indie,Valve,68.2,90,0.0,Low Risk
+63,Asia,Simulation,Activision,80.8,7,0.6,High Risk
+64,Europe,RPG,Valve,294.1,180,0.0,Low Risk
+65,North America,RPG,Activision,137.5,30,0.0,Low Risk
+66,Europe,Strategy,EA,64.8,90,0.0,Low Risk
+67,North America,Action,Ubisoft,189.1,180,0.0,Low Risk
+68,Asia,Action,Valve,204.5,90,0.0,Low Risk
+69,North America,RPG,Ubisoft,41.8,90,0.3,Medium Risk
+70,Oceania,Action,EA,67.6,90,0.0,Low Risk
+71,Asia,Action,Ubisoft,103.4,30,0.0,Low Risk
+72,North America,Action,Valve,86.3,180,0.1,Low Risk
+73,North America,Action,Ubisoft,67.8,30,0.0,Low Risk
+74,Asia,Action,Activision,236.9,90,0.0,Low Risk
+75,Asia,Indie,Valve,57.3,90,0.0,Low Risk
+76,Asia,RPG,Valve,260.4,30,0.0,Low Risk
+77,Asia,RPG,Valve,277.6,30,0.0,Low Risk
+78,North America,Strategy,Ubisoft,32.7,30,0.4,Medium Risk
+79,Europe,Action,Ubisoft,343.6,180,0.0,Low Risk
+80,North America,Indie,EA,112.4,365,0.0,Low Risk
+81,South America,Simulation,Valve,117.6,90,0.0,Low Risk
+82,Europe,Action,EA,209.9,90,0.0,Low Risk
+83,North America,RPG,Ubisoft,40.8,365,0.4,Medium Risk
+84,North America,Simulation,EA,134.3,7,0.6,High Risk
+85,North America,Indie,Indie Studio,55.9,30,0.1,Low Risk
+86,North America,RPG,Valve,114.2,90,0.0,Low Risk
+87,Asia,Strategy,Ubisoft,86.4,180,0.1,Low Risk
+88,Europe,Action,EA,352.5,180,0.0,Low Risk
+89,South America,Indie,EA,132.4,30,0.0,Low Risk
+90,Europe,Action,Ubisoft,31.1,7,0.8999999999999999,High Risk
+91,North America,Indie,Ubisoft,124.8,30,0.0,Low Risk
+92,Asia,Strategy,Indie Studio,90.3,30,0.0,Low Risk
+93,Asia,Strategy,Valve,51.5,30,0.0,Low Risk
+94,Europe,RPG,Valve,296.5,180,0.0,Low Risk
+95,Asia,Action,Ubisoft,178.5,7,0.6,High Risk
+96,Europe,Action,Ubisoft,58.3,180,0.0,Low Risk
+97,Europe,Action,Valve,142.7,30,0.0,Low Risk
+98,Europe,Action,Valve,43.5,90,0.3,Medium Risk
+99,North America,Simulation,Valve,81.0,7,0.6,High Risk
+100,North America,RPG,Activision,27.7,30,0.3,Medium Risk
+101,North America,Action,Valve,158.0,7,0.6,High Risk
+102,Europe,Indie,EA,129.3,365,0.0,Low Risk
+103,North America,Simulation,Valve,167.9,180,0.1,Low Risk
+104,Europe,Indie,EA,176.7,30,0.0,Low Risk
+105,South America,Indie,Valve,36.9,30,0.3,Medium Risk
+106,North America,Action,EA,219.5,365,0.0,Low Risk
+107,Europe,RPG,Valve,66.6,30,0.0,Low Risk
+108,Asia,Simulation,Activision,91.3,7,0.6,High Risk
+109,North America,Strategy,Valve,207.1,90,0.0,Low Risk
+110,North America,Action,EA,220.4,365,0.0,Low Risk
+111,North America,Simulation,Activision,194.4,7,0.6,High Risk
+112,North America,Action,Ubisoft,141.4,30,0.0,Low Risk
+113,South America,Action,EA,181.4,365,0.0,Low Risk
+114,Asia,RPG,EA,111.6,7,0.6,High Risk
+115,Europe,Strategy,EA,41.6,7,0.8999999999999999,High Risk
+116,South America,Strategy,Ubisoft,48.1,90,0.3,Medium Risk
+117,Asia,Action,Indie Studio,309.2,180,0.1,Low Risk
+118,North America,Simulation,Ubisoft,126.0,30,0.0,Low Risk
+119,South America,Action,Ubisoft,52.5,365,0.0,Low Risk
+120,Europe,Action,Ubisoft,65.0,90,0.0,Low Risk
+121,Asia,Simulation,EA,164.5,7,0.7,High Risk
+122,South America,Indie,Valve,211.4,365,0.1,Low Risk
+123,North America,Simulation,Ubisoft,48.1,30,0.3,Medium Risk
+124,North America,Simulation,Indie Studio,191.1,30,0.0,Low Risk
+125,North America,Strategy,Valve,66.5,90,0.0,Low Risk
+126,Europe,Strategy,Ubisoft,134.5,30,0.0,Low Risk
+127,Asia,Action,Valve,28.2,7,0.8999999999999999,High Risk
+128,South America,RPG,EA,38.0,7,0.9999999999999999,High Risk
+129,North America,RPG,Valve,145.5,30,0.0,Low Risk
+130,Europe,Action,EA,133.4,180,0.0,Low Risk
+131,Europe,Strategy,Activision,112.9,90,0.0,Low Risk
+132,North America,RPG,EA,102.8,365,0.0,Low Risk
+133,North America,Action,Ubisoft,163.0,30,0.0,Low Risk
+134,North America,Action,Activision,55.3,30,0.0,Low Risk
+135,South America,Strategy,Indie Studio,382.8,7,0.7,High Risk
+136,North America,Action,Valve,73.4,7,0.7,High Risk
+137,Europe,Simulation,EA,78.2,30,0.0,Low Risk
+138,Asia,RPG,Valve,241.4,180,0.0,Low Risk
+139,Europe,RPG,Indie Studio,67.6,365,0.0,Low Risk
+140,Oceania,Strategy,Indie Studio,196.7,365,0.0,Low Risk
+141,Oceania,Simulation,EA,50.4,30,0.0,Low Risk
+142,North America,RPG,Activision,140.5,180,0.0,Low Risk
+143,Europe,Strategy,EA,136.7,30,0.1,Low Risk
+144,North America,Strategy,Ubisoft,51.8,7,0.6,High Risk
+145,North America,Action,Valve,75.0,180,0.0,Low Risk
+146,North America,Simulation,Activision,65.7,90,0.0,Low Risk
+147,Europe,Simulation,Valve,218.1,7,0.6,High Risk
+148,Europe,Strategy,Activision,128.4,30,0.0,Low Risk
+149,North America,Simulation,Activision,55.7,30,0.0,Low Risk
+150,North America,Simulation,Ubisoft,139.5,90,0.0,Low Risk
+151,South America,Strategy,Valve,88.8,30,0.0,Low Risk
+152,North America,Simulation,EA,103.6,365,0.0,Low Risk
+153,North America,Strategy,Valve,59.1,7,0.6,High Risk
+154,Europe,Strategy,EA,135.8,30,0.0,Low Risk
+155,Oceania,Strategy,Valve,222.2,30,0.0,Low Risk
+156,North America,Simulation,Indie Studio,316.8,90,0.0,Low Risk
+157,Asia,Action,Ubisoft,149.9,30,0.0,Low Risk
+158,Asia,Simulation,EA,61.3,90,0.0,Low Risk
+159,North America,Simulation,EA,149.5,180,0.1,Low Risk
+160,Asia,Action,EA,424.4,365,0.0,Low Risk
+161,Europe,Simulation,Ubisoft,181.1,180,0.0,Low Risk
+162,Europe,Action,EA,271.8,180,0.1,Low Risk
+163,Europe,RPG,Indie Studio,62.5,90,0.0,Low Risk
+164,Europe,Strategy,EA,90.0,180,0.0,Low Risk
+165,North America,Action,Indie Studio,149.0,30,0.0,Low Risk
+166,Asia,Simulation,Activision,268.2,30,0.1,Low Risk
+167,North America,Simulation,Valve,97.1,30,0.1,Low Risk
+168,North America,RPG,Indie Studio,141.5,30,0.0,Low Risk
+169,North America,Action,Valve,215.1,30,0.0,Low Risk
+170,Europe,Action,Activision,69.0,365,0.0,Low Risk
+171,Asia,Strategy,EA,31.7,30,0.4,Medium Risk
+172,North America,Indie,Activision,242.9,7,0.7,High Risk
+173,Europe,Strategy,Activision,79.5,90,0.0,Low Risk
+174,North America,Action,Activision,162.0,7,0.6,High Risk
+175,Europe,Strategy,Activision,143.5,7,0.6,High Risk
+176,North America,RPG,EA,153.9,30,0.0,Low Risk
+177,Asia,Simulation,Valve,128.9,30,0.0,Low Risk
+178,Europe,Action,EA,91.9,30,0.0,Low Risk
+179,South America,Simulation,Valve,143.6,180,0.0,Low Risk
+180,North America,RPG,Ubisoft,127.2,90,0.0,Low Risk
+181,North America,Indie,EA,125.0,30,0.1,Low Risk
+182,North America,RPG,Indie Studio,163.9,30,0.0,Low Risk
+183,South America,Strategy,Ubisoft,133.2,30,0.0,Low Risk
+184,South America,Indie,Activision,106.0,180,0.0,Low Risk
+185,North America,Action,Valve,70.0,7,0.7,High Risk
+186,Asia,Indie,Activision,170.9,7,0.6,High Risk
+187,Asia,Strategy,Indie Studio,57.7,180,0.0,Low Risk
+188,Europe,Action,EA,58.9,30,0.0,Low Risk
+189,Europe,RPG,Ubisoft,226.0,7,0.6,High Risk
+190,North America,Strategy,Activision,363.9,30,0.0,Low Risk
+191,North America,Action,Valve,201.6,365,0.0,Low Risk
+192,South America,Strategy,EA,221.4,180,0.1,Low Risk
+193,South America,RPG,EA,30.1,90,0.3,Medium Risk
+194,Europe,Strategy,Valve,53.3,30,0.0,Low Risk
+195,North America,Action,EA,114.2,90,0.0,Low Risk
+196,North America,Simulation,Valve,144.6,365,0.0,Low Risk
+197,Asia,Indie,Valve,87.9,365,0.0,Low Risk
+198,South America,Indie,Valve,39.3,30,0.3,Medium Risk
+199,South America,Strategy,Indie Studio,94.1,180,0.0,Low Risk
+200,Asia,Action,EA,267.9,7,0.6,High Risk
+201,Europe,Simulation,Indie Studio,173.7,30,0.0,Low Risk
+202,North America,Action,EA,106.7,90,0.0,Low Risk
+203,North America,Action,EA,27.4,30,0.3,Medium Risk
+204,South America,RPG,EA,6.3,365,0.4,Medium Risk
+205,Europe,RPG,EA,150.5,7,0.6,High Risk
+206,North America,Simulation,Valve,47.7,90,0.3,Medium Risk
+207,North America,Strategy,Ubisoft,114.0,365,0.0,Low Risk
+208,Asia,RPG,Valve,54.0,365,0.0,Low Risk
+209,North America,Action,Ubisoft,186.4,7,0.6,High Risk
+210,North America,Indie,Ubisoft,76.2,30,0.0,Low Risk
+211,Europe,RPG,Valve,81.5,90,0.0,Low Risk
+212,Asia,RPG,Valve,105.6,7,0.6,High Risk
+213,Asia,Action,Activision,75.1,365,0.0,Low Risk
+214,North America,Simulation,EA,82.0,365,0.0,Low Risk
+215,Asia,Strategy,Valve,55.2,7,0.6,High Risk
+216,North America,Action,Indie Studio,277.8,7,0.6,High Risk
+217,North America,Action,Valve,270.9,7,0.6,High Risk
+218,Asia,Strategy,Ubisoft,117.7,365,0.0,Low Risk
+219,Europe,Strategy,Indie Studio,37.8,7,0.8999999999999999,High Risk
+220,Asia,Action,Valve,87.5,30,0.0,Low Risk
+221,Asia,Indie,Valve,196.5,30,0.0,Low Risk
+222,Europe,Action,Valve,51.7,90,0.0,Low Risk
+223,North America,RPG,EA,119.4,7,0.6,High Risk
+224,Europe,Indie,Valve,42.1,30,0.3,Medium Risk
+225,North America,RPG,Ubisoft,162.0,365,0.1,Low Risk
+226,North America,Strategy,Valve,69.4,365,0.0,Low Risk
+227,Oceania,RPG,EA,124.6,180,0.0,Low Risk
+228,Europe,Action,Indie Studio,223.4,7,0.6,High Risk
+229,South America,Indie,Activision,272.3,30,0.0,Low Risk
+230,Europe,RPG,Ubisoft,167.4,90,0.0,Low Risk
+231,Asia,Simulation,EA,189.3,30,0.0,Low Risk
+232,Europe,Action,Ubisoft,190.4,365,0.0,Low Risk
+233,Europe,Action,EA,114.3,90,0.0,Low Risk
+234,Europe,Action,EA,29.1,7,0.8999999999999999,High Risk
+235,North America,Strategy,Valve,213.0,365,0.0,Low Risk
+236,Asia,RPG,Activision,107.3,365,0.0,Low Risk
+237,North America,Simulation,EA,64.3,7,0.6,High Risk
+238,North America,RPG,Valve,62.8,90,0.0,Low Risk
+239,Europe,Indie,EA,126.9,30,0.0,Low Risk
+240,North America,Action,EA,122.4,30,0.0,Low Risk
+241,South America,Simulation,Activision,107.5,7,0.6,High Risk
+242,Oceania,Simulation,Ubisoft,271.6,90,0.0,Low Risk
+243,South America,Simulation,Activision,170.3,365,0.0,Low Risk
+244,Europe,Simulation,Valve,225.9,90,0.0,Low Risk
+245,North America,Simulation,EA,134.7,7,0.6,High Risk
+246,South America,Strategy,EA,151.0,90,0.0,Low Risk
+247,Europe,Action,Valve,295.4,30,0.0,Low Risk
+248,Oceania,Action,Valve,74.0,180,0.0,Low Risk
+249,Oceania,Indie,Activision,19.1,30,0.3,Medium Risk
+250,South America,Strategy,Valve,309.5,7,0.6,High Risk
+251,North America,Simulation,EA,237.8,7,0.6,High Risk
+252,Europe,RPG,Valve,155.5,180,0.0,Low Risk
+253,South America,Action,Valve,253.0,30,0.0,Low Risk
+254,North America,Action,Valve,104.1,180,0.0,Low Risk
+255,North America,Strategy,Indie Studio,70.7,30,0.0,Low Risk
+256,Europe,RPG,Activision,53.8,30,0.0,Low Risk
+257,South America,Action,Indie Studio,68.2,30,0.1,Low Risk
+258,Asia,RPG,EA,126.5,365,0.0,Low Risk
+259,Europe,Action,Valve,135.0,365,0.0,Low Risk
+260,North America,Strategy,EA,98.0,30,0.0,Low Risk
+261,Europe,Action,EA,155.0,30,0.1,Low Risk
+262,Oceania,Simulation,Activision,59.2,7,0.6,High Risk
+263,North America,RPG,Valve,297.3,90,0.0,Low Risk
+264,Europe,RPG,EA,56.6,30,0.0,Low Risk
+265,South America,Action,Valve,116.9,365,0.0,Low Risk
+266,Asia,Action,EA,187.5,365,0.0,Low Risk
+267,Asia,RPG,Ubisoft,175.6,30,0.0,Low Risk
+268,Asia,RPG,EA,158.7,30,0.0,Low Risk
+269,Europe,Strategy,EA,103.1,180,0.0,Low Risk
+270,North America,Action,EA,112.2,180,0.1,Low Risk
+271,Asia,Strategy,EA,99.2,7,0.6,High Risk
+272,Asia,Simulation,Activision,81.7,30,0.1,Low Risk
+273,South America,Simulation,Activision,279.9,30,0.0,Low Risk
+274,South America,Action,Indie Studio,115.8,30,0.0,Low Risk
+275,Europe,RPG,Activision,251.2,7,0.6,High Risk
+276,Europe,Action,EA,97.0,7,0.6,High Risk
+277,Asia,Action,Ubisoft,71.1,90,0.0,Low Risk
+278,Europe,Indie,EA,49.6,30,0.3,Medium Risk
+279,Asia,Action,Valve,180.5,7,0.6,High Risk
+280,Asia,RPG,Activision,49.6,30,0.3,Medium Risk
+281,South America,Strategy,Valve,48.0,180,0.3,Medium Risk
+282,North America,Strategy,Indie Studio,137.5,180,0.0,Low Risk
+283,Europe,Strategy,EA,227.5,30,0.0,Low Risk
+284,North America,Action,Ubisoft,26.7,30,0.3,Medium Risk
+285,Europe,RPG,Ubisoft,104.0,365,0.1,Low Risk
+286,North America,RPG,Activision,419.8,30,0.0,Low Risk
+287,Europe,Action,Ubisoft,56.6,30,0.0,Low Risk
+288,Europe,RPG,Ubisoft,83.8,30,0.0,Low Risk
+289,North America,Action,Valve,119.2,7,0.6,High Risk
+290,Europe,Action,EA,74.0,30,0.1,Low Risk
+291,North America,RPG,Valve,185.2,365,0.0,Low Risk
+292,North America,Action,Ubisoft,348.3,90,0.0,Low Risk
+293,Asia,Strategy,EA,45.4,30,0.3,Medium Risk
+294,Europe,Strategy,Ubisoft,356.3,365,0.0,Low Risk
+295,North America,Simulation,Valve,85.1,7,0.7,High Risk
+296,Europe,Action,Valve,42.2,30,0.3,Medium Risk
+297,Asia,Action,Ubisoft,70.9,90,0.0,Low Risk
+298,North America,Action,Valve,243.1,90,0.0,Low Risk
+299,Europe,Strategy,Valve,42.0,7,0.8999999999999999,High Risk
+300,North America,Strategy,Valve,190.8,30,0.0,Low Risk
+301,North America,Action,Indie Studio,127.4,90,0.0,Low Risk
+302,Europe,Indie,Ubisoft,57.6,90,0.0,Low Risk
+303,Europe,Action,EA,231.1,90,0.0,Low Risk
+304,Europe,RPG,Valve,60.5,30,0.0,Low Risk
+305,Asia,Strategy,EA,227.7,7,0.6,High Risk
+306,Oceania,Simulation,Activision,286.9,30,0.0,Low Risk
+307,Europe,Strategy,Ubisoft,92.1,7,0.7,High Risk
+308,North America,Simulation,Valve,256.9,365,0.0,Low Risk
+309,Asia,RPG,Valve,148.1,30,0.0,Low Risk
+310,North America,Simulation,Valve,194.8,30,0.0,Low Risk
+311,Europe,Action,Ubisoft,54.1,180,0.0,Low Risk
+312,North America,Simulation,Activision,75.3,30,0.0,Low Risk
+313,North America,RPG,Valve,141.2,30,0.0,Low Risk
+314,Oceania,Simulation,Valve,72.1,180,0.0,Low Risk
+315,Asia,RPG,Valve,34.4,180,0.3,Medium Risk
+316,Asia,Strategy,Indie Studio,363.6,90,0.0,Low Risk
+317,Europe,RPG,Valve,49.1,7,0.8999999999999999,High Risk
+318,North America,Strategy,Activision,180.8,90,0.1,Low Risk
+319,North America,Action,Ubisoft,95.5,180,0.0,Low Risk
+320,North America,Action,EA,38.9,7,0.8999999999999999,High Risk
+321,Europe,Action,Valve,241.4,30,0.0,Low Risk
+322,Asia,Action,Valve,43.4,180,0.3,Medium Risk
+323,Asia,Simulation,Ubisoft,145.9,7,0.6,High Risk
+324,North America,Action,Activision,137.8,180,0.0,Low Risk
+325,Oceania,Indie,Ubisoft,199.4,30,0.0,Low Risk
+326,Asia,RPG,EA,60.2,30,0.0,Low Risk
+327,Europe,Action,Valve,48.6,7,0.8999999999999999,High Risk
+328,Europe,Simulation,Indie Studio,293.9,180,0.0,Low Risk
+329,Europe,Strategy,Activision,46.8,30,0.3,Medium Risk
+330,North America,RPG,Valve,53.1,90,0.0,Low Risk
+331,Europe,Strategy,Indie Studio,76.8,90,0.0,Low Risk
+332,Asia,Strategy,Ubisoft,51.5,90,0.0,Low Risk
+333,North America,Action,Ubisoft,102.9,365,0.0,Low Risk
+334,North America,Indie,Ubisoft,85.7,90,0.0,Low Risk
+335,North America,Indie,Activision,145.1,30,0.1,Low Risk
+336,North America,Strategy,Ubisoft,229.2,365,0.0,Low Risk
+337,South America,Action,Valve,86.3,90,0.0,Low Risk
+338,Asia,Strategy,EA,133.6,30,0.0,Low Risk
+339,Europe,Action,Indie Studio,27.8,7,0.8999999999999999,High Risk
+340,North America,Action,Valve,166.8,180,0.1,Low Risk
+341,Europe,Action,EA,52.3,30,0.0,Low Risk
+342,Europe,RPG,EA,188.5,90,0.1,Low Risk
+343,North America,Simulation,EA,318.2,30,0.0,Low Risk
+344,Europe,Strategy,Ubisoft,196.2,7,0.6,High Risk
+345,Europe,Strategy,Indie Studio,203.0,90,0.0,Low Risk
+346,Europe,RPG,Valve,166.0,7,0.6,High Risk
+347,Europe,RPG,Valve,194.6,30,0.0,Low Risk
+348,North America,RPG,Valve,329.9,90,0.0,Low Risk
+349,Europe,Indie,Activision,261.5,30,0.1,Low Risk
+350,Europe,Action,Ubisoft,69.3,90,0.0,Low Risk
+351,Europe,Simulation,Valve,45.5,180,0.3,Medium Risk
+352,South America,Strategy,Activision,93.9,180,0.0,Low Risk
+353,Asia,RPG,Activision,28.3,7,0.8999999999999999,High Risk
+354,North America,Strategy,Activision,154.4,7,0.6,High Risk
+355,North America,RPG,Indie Studio,153.2,90,0.0,Low Risk
+356,Europe,Simulation,Valve,160.7,365,0.1,Low Risk
+357,North America,Indie,Activision,58.9,180,0.0,Low Risk
+358,Europe,RPG,EA,70.9,180,0.0,Low Risk
+359,South America,Action,Activision,133.2,30,0.0,Low Risk
+360,Europe,Strategy,Ubisoft,191.3,30,0.0,Low Risk
+361,Europe,Indie,Activision,92.1,30,0.1,Low Risk
+362,Europe,Action,Ubisoft,79.4,7,0.6,High Risk
+363,Europe,Strategy,Valve,210.1,7,0.6,High Risk
+364,Europe,Strategy,EA,130.7,365,0.0,Low Risk
+365,South America,Strategy,Indie Studio,46.4,30,0.3,Medium Risk
+366,Europe,Action,Indie Studio,193.8,30,0.0,Low Risk
+367,Oceania,Strategy,Valve,75.7,7,0.6,High Risk
+368,South America,Indie,Valve,388.1,365,0.0,Low Risk
+369,North America,Action,Valve,57.4,90,0.0,Low Risk
+370,North America,Action,Ubisoft,108.1,90,0.0,Low Risk
+371,North America,Indie,Activision,11.8,365,0.3,Medium Risk
+372,North America,Action,Valve,76.6,30,0.0,Low Risk
+373,North America,Simulation,EA,290.8,90,0.0,Low Risk
+374,Asia,RPG,Activision,84.3,7,0.6,High Risk
+375,North America,Action,Ubisoft,23.4,7,0.8999999999999999,High Risk
+376,North America,Simulation,EA,129.6,180,0.0,Low Risk
+377,Asia,RPG,Ubisoft,32.1,180,0.3,Medium Risk
+378,North America,RPG,EA,39.8,30,0.3,Medium Risk
+379,Asia,RPG,Valve,232.9,30,0.1,Low Risk
+380,North America,Strategy,Ubisoft,192.0,90,0.0,Low Risk
+381,North America,Action,Ubisoft,259.2,7,0.6,High Risk
+382,Asia,RPG,Activision,209.4,30,0.0,Low Risk
+383,Europe,Indie,Ubisoft,144.6,30,0.0,Low Risk
+384,South America,Action,Activision,54.7,30,0.0,Low Risk
+385,Asia,Strategy,Valve,194.4,180,0.0,Low Risk
+386,Asia,RPG,EA,276.7,30,0.1,Low Risk
+387,North America,Simulation,Valve,230.8,7,0.6,High Risk
+388,North America,Action,Valve,114.0,90,0.0,Low Risk
+389,Asia,Indie,Ubisoft,118.4,180,0.0,Low Risk
+390,Asia,RPG,Indie Studio,172.9,30,0.0,Low Risk
+391,Oceania,Action,Valve,121.8,7,0.6,High Risk
+392,Europe,Action,EA,236.0,30,0.0,Low Risk
+393,Europe,Action,Activision,114.9,90,0.0,Low Risk
+394,Asia,RPG,Valve,90.3,90,0.0,Low Risk
+395,North America,RPG,Ubisoft,62.1,180,0.0,Low Risk
+396,South America,Simulation,Ubisoft,131.0,365,0.0,Low Risk
+397,South America,RPG,Ubisoft,46.2,180,0.3,Medium Risk
+398,Europe,Action,Valve,44.0,90,0.3,Medium Risk
+399,Asia,Strategy,EA,119.8,30,0.0,Low Risk
+400,Asia,Strategy,Activision,41.1,7,0.8999999999999999,High Risk
+401,North America,Action,Ubisoft,102.7,365,0.0,Low Risk
+402,South America,Action,Valve,106.7,30,0.0,Low Risk
+403,Europe,Action,Activision,103.4,7,0.6,High Risk
+404,Asia,Strategy,Valve,170.9,90,0.0,Low Risk
+405,North America,Strategy,Ubisoft,146.2,30,0.0,Low Risk
+406,South America,RPG,Valve,224.5,90,0.0,Low Risk
+407,Europe,Simulation,Indie Studio,16.0,90,0.3,Medium Risk
+408,North America,Simulation,EA,53.5,30,0.0,Low Risk
+409,South America,Strategy,EA,96.3,180,0.0,Low Risk
+410,North America,Simulation,Valve,227.4,30,0.0,Low Risk
+411,North America,Action,EA,252.6,30,0.0,Low Risk
+412,Oceania,Action,Activision,147.7,90,0.0,Low Risk
+413,Oceania,Action,Indie Studio,131.2,90,0.0,Low Risk
+414,Europe,Action,EA,58.0,180,0.0,Low Risk
+415,Europe,RPG,EA,265.4,30,0.0,Low Risk
+416,Europe,Indie,Ubisoft,233.1,90,0.0,Low Risk
+417,North America,Action,Activision,86.4,7,0.6,High Risk
+418,North America,Action,Ubisoft,200.9,365,0.0,Low Risk
+419,Asia,RPG,EA,40.1,30,0.3,Medium Risk
+420,Asia,Indie,EA,73.7,90,0.0,Low Risk
+421,Asia,RPG,Ubisoft,90.4,7,0.6,High Risk
+422,Asia,RPG,Valve,50.3,30,0.0,Low Risk
+423,North America,Action,Ubisoft,143.3,30,0.1,Low Risk
+424,Europe,Action,EA,166.9,180,0.0,Low Risk
+425,North America,Indie,Activision,93.1,90,0.1,Low Risk
+426,Europe,Indie,Valve,153.0,365,0.0,Low Risk
+427,Europe,Action,Ubisoft,21.2,30,0.3,Medium Risk
+428,South America,Indie,EA,94.9,30,0.0,Low Risk
+429,Europe,Strategy,Ubisoft,149.8,7,0.6,High Risk
+430,North America,Simulation,Valve,178.2,180,0.0,Low Risk
+431,North America,RPG,Ubisoft,34.3,30,0.3,Medium Risk
+432,Asia,RPG,Ubisoft,188.5,180,0.0,Low Risk
+433,Europe,RPG,Ubisoft,345.9,365,0.0,Low Risk
+434,North America,Strategy,Ubisoft,120.6,365,0.0,Low Risk
+435,North America,Action,Ubisoft,97.9,90,0.0,Low Risk
+436,Asia,Action,Activision,45.7,90,0.3,Medium Risk
+437,North America,RPG,Valve,251.9,180,0.0,Low Risk
+438,Asia,Strategy,Activision,31.3,7,0.8999999999999999,High Risk
+439,Asia,Action,EA,157.2,90,0.0,Low Risk
+440,North America,Strategy,Valve,235.2,7,0.6,High Risk
+441,North America,Indie,Valve,172.2,30,0.0,Low Risk
+442,Oceania,Action,EA,185.3,7,0.6,High Risk
+443,Europe,Strategy,Activision,78.8,7,0.6,High Risk
+444,Europe,RPG,Ubisoft,172.7,30,0.1,Low Risk
+445,Asia,Simulation,Activision,41.6,30,0.3,Medium Risk
+446,South America,Action,EA,62.0,90,0.0,Low Risk
+447,Oceania,Strategy,EA,215.1,7,0.6,High Risk
+448,Asia,Simulation,Valve,46.4,90,0.3,Medium Risk
+449,Europe,Indie,EA,59.5,7,0.6,High Risk
+450,North America,Strategy,EA,297.6,90,0.0,Low Risk
+451,Asia,RPG,Valve,72.4,90,0.0,Low Risk
+452,Europe,Strategy,Valve,143.7,90,0.0,Low Risk
+453,Europe,Simulation,Ubisoft,149.5,90,0.0,Low Risk
+454,South America,Strategy,Ubisoft,215.2,30,0.0,Low Risk
+455,North America,Action,Indie Studio,151.9,180,0.1,Low Risk
+456,Europe,Indie,Indie Studio,185.3,30,0.0,Low Risk
+457,North America,Strategy,Ubisoft,48.2,30,0.3,Medium Risk
+458,Europe,Strategy,EA,142.1,90,0.0,Low Risk
+459,North America,Action,Ubisoft,77.4,7,0.6,High Risk
+460,North America,Strategy,Activision,85.9,90,0.0,Low Risk
+461,North America,RPG,Valve,40.3,90,0.3,Medium Risk
+462,Europe,Strategy,EA,128.6,30,0.0,Low Risk
+463,Asia,Action,Activision,98.0,7,0.6,High Risk
+464,Europe,Strategy,EA,125.3,7,0.6,High Risk
+465,Oceania,Indie,Ubisoft,62.2,365,0.0,Low Risk
+466,Europe,Action,Ubisoft,92.2,90,0.0,Low Risk
+467,North America,Indie,Valve,244.3,7,0.6,High Risk
+468,South America,RPG,EA,124.9,30,0.0,Low Risk
+469,North America,Simulation,EA,72.7,90,0.0,Low Risk
+470,Oceania,Simulation,Valve,45.6,180,0.3,Medium Risk
+471,North America,Strategy,Valve,82.9,7,0.6,High Risk
+472,Oceania,Strategy,Activision,335.0,30,0.0,Low Risk
+473,North America,Simulation,Valve,152.1,180,0.0,Low Risk
+474,South America,RPG,EA,165.7,7,0.6,High Risk
+475,Europe,RPG,Valve,103.5,30,0.0,Low Risk
+476,Oceania,Strategy,Indie Studio,89.1,365,0.0,Low Risk
+477,North America,Simulation,Valve,199.5,90,0.1,Low Risk
+478,Europe,Simulation,EA,163.2,30,0.0,Low Risk
+479,Oceania,Simulation,Activision,72.7,7,0.6,High Risk
+480,Europe,RPG,Activision,57.1,7,0.6,High Risk
+481,Europe,Simulation,Valve,71.4,30,0.0,Low Risk
+482,Asia,Action,Activision,264.5,180,0.0,Low Risk
+483,Europe,RPG,EA,79.0,30,0.1,Low Risk
+484,Europe,Action,EA,106.3,90,0.1,Low Risk
+485,Europe,RPG,Valve,158.7,365,0.0,Low Risk
+486,South America,RPG,Valve,41.0,30,0.4,Medium Risk
+487,North America,RPG,Ubisoft,25.1,7,0.8999999999999999,High Risk
+488,North America,Strategy,EA,42.8,90,0.3,Medium Risk
+489,Oceania,RPG,EA,244.0,365,0.0,Low Risk
+490,South America,RPG,Ubisoft,71.9,180,0.0,Low Risk
+491,Europe,Action,Activision,108.0,7,0.7,High Risk
+492,Europe,RPG,Valve,180.5,90,0.0,Low Risk
+493,North America,Action,Ubisoft,303.9,90,0.0,Low Risk
+494,North America,Action,Valve,71.7,365,0.0,Low Risk
+495,Europe,Strategy,Activision,134.6,7,0.6,High Risk
+496,Europe,Strategy,Ubisoft,153.8,90,0.0,Low Risk
+497,Europe,Strategy,Indie Studio,239.3,180,0.1,Low Risk
+498,North America,RPG,Valve,100.9,30,0.0,Low Risk
+499,Oceania,RPG,Valve,44.0,30,0.3,Medium Risk
+500,Oceania,Simulation,Valve,332.7,7,0.6,High Risk
