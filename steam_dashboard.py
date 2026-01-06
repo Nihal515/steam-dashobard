@@ -1621,7 +1621,7 @@ with tab8:
         )
         
         fig.add_trace(
-            go.Scatter(x=_ensure_list(pub_revenue.index)[:20], y=_ensure_list(pub_cumsum_pct)[:20], name='Cumulative %', line=dict(color='#ff7f0e', width=3), mode='lines+markers'),
+            go.Scatter(x=_ensure_list(pub_revenue.index)[:20], y=_ensure_list(pub_cumsum_pct[:20]), name='Cumulative %', line=dict(color='#ff7f0e', width=3), mode='lines+markers'),
             secondary_y=True
         )
         
@@ -1858,7 +1858,7 @@ with tab9:
         for cohort in genre_retention_pct.index[-5:]:  # Last 5 cohorts
             fig.add_trace(go.Scatter(
                 x=list(range(len(genre_retention_pct.columns))),
-                y=_ensure_list(genre_retention_pct).loc[cohort],
+                y=_ensure_list(genre_retention_pct.loc[cohort]),
                 mode='lines+markers',
                 name=str(cohort)
             ))
