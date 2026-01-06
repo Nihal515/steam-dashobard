@@ -134,6 +134,17 @@ def load_data():
     
     return data_set, steam_ARPU_table, steam_CLV_table, steam_DAU_table, steam_MAU_table, steam_churn_predictions, steam_revenue_forecast_90d, steam_scenario_parameters
 
+def _ensure_list(data):
+    """Convert pandas Series/Index or numpy array to list"""
+    if hasattr(data, 'tolist'):
+        return data.tolist()
+    elif hasattr(data, 'values'):
+        return data.values.tolist()
+    else:
+        return list(data)
+
+
+
 df, arpu, clv, dau, mau, churn, revenue_forecast, scenario = load_data()
 
 # ===========================
@@ -493,8 +504,8 @@ with tab1:
         genre_rev = filtered_df.groupby('genre')['net_revenue'].sum().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            x=genre_rev.index,
-            y=genre_rev.values,
+            x=_ensure_list(genre_rev.index),
+            y=_ensure_list(genre_rev.values),
             marker=dict(
                 color=genre_rev.values,
                 colorscale='Viridis',
@@ -656,8 +667,8 @@ with tab2:
         dow_rev = filtered_df.groupby('day_of_week')['net_revenue'].sum().reindex(dow_order)
         
         fig = go.Figure(data=[go.Bar(
-            x=dow_rev.index,
-            y=dow_rev.values,
+            x=_ensure_list(dow_rev.index),
+            y=_ensure_list(dow_rev.values),
             marker=dict(color=['#1f77d2' if x in ['Saturday', 'Sunday'] else '#ff7f0e' for x in dow_rev.index])
         )])
         
@@ -683,7 +694,7 @@ with tab2:
         fig = go.Figure()
         for genre in genre_monthly.columns:
             fig.add_trace(go.Scatter(
-                x=genre_monthly.index,
+                x=_ensure_list(genre_monthly.index),
                 y=genre_monthly[genre],
                 mode='lines+markers',
                 name=genre
@@ -712,8 +723,8 @@ with tab3:
         genre_price = filtered_df.groupby('genre')['avg_game_price'].mean().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            x=genre_price.index,
-            y=genre_price.values,
+            x=_ensure_list(genre_price.index),
+            y=_ensure_list(genre_price.values),
             marker=dict(color='#ff7f0e'),
             text=[f"${x:.2f}" for x in genre_price.values],
             textposition='auto'
@@ -906,8 +917,8 @@ with tab4:
         region_pub = filtered_df[filtered_df['region'] == selected_region].groupby('publisher')['net_revenue'].sum().sort_values(ascending=False).head(10)
         
         fig = go.Figure(data=[go.Bar(
-            x=region_pub.index,
-            y=region_pub.values,
+            x=_ensure_list(region_pub.index),
+            y=_ensure_list(region_pub.values),
             marker=dict(color='#2ca02c')
         )])
         
@@ -969,8 +980,8 @@ with tab5:
         age_rev = filtered_df.groupby('age_group')['net_revenue'].sum().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            x=age_rev.index,
-            y=age_rev.values,
+            x=_ensure_list(age_rev.index),
+            y=_ensure_list(age_rev.values),
             marker=dict(color='#1f77d2'),
             text=[f"${x:,.0f}" for x in age_rev.values],
             textposition='auto'
@@ -1181,8 +1192,8 @@ with tab6:
         
         fig = go.Figure()
         fig.add_trace(go.Bar(
-            x=forecast_genre.index,
-            y=forecast_genre.values,
+            x=_ensure_list(forecast_genre.index),
+            y=_ensure_list(forecast_genre.values),
             name='Forecast',
             marker=dict(color='#1f77d2'),
             text=[f"${x:,.0f}" for x in forecast_genre.values],
@@ -1204,8 +1215,8 @@ with tab6:
         
         fig = go.Figure()
         fig.add_trace(go.Bar(
-            x=forecast_region.index,
-            y=forecast_region.values,
+            x=_ensure_list(forecast_region.index),
+            y=_ensure_list(forecast_region.values),
             name='Forecast',
             marker=dict(color='#ff7f0e'),
             text=[f"${x:,.0f}" for x in forecast_region.values],
@@ -1235,14 +1246,14 @@ with tab6:
     fig = go.Figure()
     
     fig.add_trace(go.Bar(
-        x=forecast_viz.index,
+        x=_ensure_list(forecast_viz.index),
         y=forecast_viz['forecasted_revenue_90d'],
         name='Forecast',
         marker=dict(color='#1f77d2')
     ))
     
     fig.add_trace(go.Scatter(
-        x=forecast_viz.index,
+        x=_ensure_list(forecast_viz.index),
         y=forecast_viz['forecast_high'],
         fill=None,
         mode='lines',
@@ -1252,7 +1263,7 @@ with tab6:
     ))
     
     fig.add_trace(go.Scatter(
-        x=forecast_viz.index,
+        x=_ensure_list(forecast_viz.index),
         y=forecast_viz['forecast_low'],
         fill='tonexty',
         mode='lines',
@@ -1281,8 +1292,8 @@ with tab6:
         churn_genre = filtered_churn.groupby('genre')['churn_probability'].mean().sort_values(ascending=False)
         
         fig = go.Figure(data=[go.Bar(
-            x=churn_genre.index,
-            y=churn_genre.values * 100,
+            x=_ensure_list(churn_genre.index),
+            y=_ensure_list(churn_genre.values) * 100,
             marker=dict(color='#ff7f0e')
         )])
         
@@ -1590,12 +1601,12 @@ with tab8:
         fig = make_subplots(specs=[[{"secondary_y": True}]])
         
         fig.add_trace(
-            go.Bar(x=pub_revenue.index[:20], y=pub_revenue.values[:20], name='Revenue', marker=dict(color='#1f77d2')),
+            go.Bar(x=_ensure_list(pub_revenue.index)[:20], y=_ensure_list(pub_revenue.values)[:20], name='Revenue', marker=dict(color='#1f77d2')),
             secondary_y=False
         )
         
         fig.add_trace(
-            go.Scatter(x=pub_revenue.index[:20], y=pub_cumsum_pct[:20], name='Cumulative %', line=dict(color='#ff7f0e', width=3), mode='lines+markers'),
+            go.Scatter(x=_ensure_list(pub_revenue.index)[:20], y=_ensure_list(pub_cumsum_pct)[:20], name='Cumulative %', line=dict(color='#ff7f0e', width=3), mode='lines+markers'),
             secondary_y=True
         )
         
@@ -1621,12 +1632,12 @@ with tab8:
         fig = make_subplots(specs=[[{"secondary_y": True}]])
         
         fig.add_trace(
-            go.Bar(x=genre_revenue.index, y=genre_revenue.values, name='Revenue', marker=dict(color='#2ca02c')),
+            go.Bar(x=_ensure_list(genre_revenue.index), y=_ensure_list(genre_revenue.values), name='Revenue', marker=dict(color='#2ca02c')),
             secondary_y=False
         )
         
         fig.add_trace(
-            go.Scatter(x=genre_revenue.index, y=genre_cumsum_pct, name='Cumulative %', line=dict(color='#d62728', width=3), mode='lines+markers'),
+            go.Scatter(x=_ensure_list(genre_revenue.index), y=_ensure_list(genre_cumsum_pct), name='Cumulative %', line=dict(color='#d62728', width=3), mode='lines+markers'),
             secondary_y=True
         )
         
@@ -1653,12 +1664,12 @@ with tab8:
         fig = make_subplots(specs=[[{"secondary_y": True}]])
         
         fig.add_trace(
-            go.Bar(x=region_revenue.index, y=region_revenue.values, name='Revenue', marker=dict(color='#ff7f0e')),
+            go.Bar(x=_ensure_list(region_revenue.index), y=_ensure_list(region_revenue.values), name='Revenue', marker=dict(color='#ff7f0e')),
             secondary_y=False
         )
         
         fig.add_trace(
-            go.Scatter(x=region_revenue.index, y=region_cumsum_pct, name='Cumulative %', line=dict(color='#1f77d2', width=3), mode='lines+markers'),
+            go.Scatter(x=_ensure_list(region_revenue.index), y=_ensure_list(region_cumsum_pct), name='Cumulative %', line=dict(color='#1f77d2', width=3), mode='lines+markers'),
             secondary_y=True
         )
         
@@ -1685,8 +1696,8 @@ with tab8:
         fig = go.Figure()
         
         fig.add_trace(go.Scatter(
-            x=range(len(cust_cumsum_pct)),
-            y=cust_cumsum_pct,
+            x=list(range(len(cust_cumsum_pct))),
+            y=_ensure_list(cust_cumsum_pct).values.tolist(),
             mode='lines',
             name='Cumulative Revenue %',
             line=dict(color='#1f77d2', width=3),
@@ -1694,7 +1705,7 @@ with tab8:
         ))
         
         fig.add_hline(y=80, line_dash="dash", line_color="red", annotation_text="80% Revenue")
-        fig.add_vline(x=twenty_pct_idx, line_dash="dash", line_color="orange", annotation_text=f"Top {((twenty_pct_idx+1)/len(cust_cumsum_pct)*100):.1f}% Customers")
+        fig.add_vline(x=int(twenty_pct_idx), line_dash="dash", line_color="orange", annotation_text=f"Top {((twenty_pct_idx+1)/len(cust_cumsum_pct)*100):.1f}% Customers")
         
         fig.update_layout(
             title="",
@@ -1777,8 +1788,8 @@ with tab9:
         st.markdown("### 📊 Cohort Size")
         
         fig = go.Figure(data=[go.Bar(
-            x=cohorts.index,
-            y=cohorts.values,
+            x=_ensure_list(cohorts.index),
+            y=_ensure_list(cohorts.values),
             marker=dict(color='#1f77d2')
         )])
         
@@ -1832,7 +1843,7 @@ with tab9:
         for cohort in genre_retention_pct.index[-5:]:  # Last 5 cohorts
             fig.add_trace(go.Scatter(
                 x=range(len(genre_retention_pct.columns)),
-                y=genre_retention_pct.loc[cohort],
+                y=_ensure_list(genre_retention_pct).loc[cohort],
                 mode='lines+markers',
                 name=str(cohort)
             ))
